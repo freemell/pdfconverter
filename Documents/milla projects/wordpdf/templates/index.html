@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milla pdf converter (ITS FUCKING FREE)</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="card">
+        <h1>Milla pdf converter</h1>
+        <p class="subtitle"><strong>ITS FUCKING FREE</strong> - lmao pay $8 una, I'll make my own jor</p>
+        
+        <form id="uploadForm" enctype="multipart/form-data">
+            <div class="upload-area" id="uploadArea">
+                <input type="file" id="fileInput" name="file" accept=".doc,.docx" required>
+                <div class="upload-content">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="17 8 12 3 7 8"></polyline>
+                        <line x1="12" y1="3" x2="12" y2="15"></line>
+                    </svg>
+                    <p class="upload-text">oh put the pdf in me, I need it bad bad ugh. the max that can fill me up is 16mb baby fuck</p>
+                    <p class="upload-hint" style="display: none;"></p>
+                </div>
+            </div>
+            
+            <div id="fileInfo" class="file-info" style="display: none;">
+                <span id="fileName"></span>
+                <button type="button" id="removeFile" class="remove-btn">×</button>
+            </div>
+            
+            <button type="submit" id="convertBtn" class="convert-btn" disabled>
+                <span id="btnText">Convert to PDF</span>
+                <span id="btnLoader" class="loader" style="display: none;"></span>
+            </button>
+        </form>
+        
+        <div id="errorMessage" class="error-message" style="display: none;"></div>
+    </div>
+    <div class="container">
+    </div>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
